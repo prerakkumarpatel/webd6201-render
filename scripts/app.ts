@@ -151,6 +151,12 @@
         // Dispalying contact page
         function DisplayContactPage():void {
             console.log("Display Contact page called");
+            $("a[data='contact-list']").off("click");
+            $("a[data='contact-list']").on("click", function()
+            {
+                LoadLink("contact-list");
+            });
+
             $("#contactList").on("click", () => LoadLink("contact-list")
             );
             let sendButton = document.getElementById("sendButton") as HTMLElement ;
@@ -222,15 +228,13 @@
                     }
                    LoadLink("contact-list");
                 });
-                $("button.edit").on("click", function () {
-                     LoadLink("edit", $(this).val() as string);
-                });
-
-            $("#addButton").on("click", (event) => {
-                event.preventDefault();
-                console.log("add c");
-                location.href = "edit#add";
-
+            $("button.edit").on("click", function()
+            {
+                LoadLink("edit", $(this).val() as string);
+            });
+            $("#addButton").on("click", ()=>
+            {
+                LoadLink("edit", "add");
             });
 
         }
@@ -277,11 +281,9 @@
         // Displaying edit page
         function DisplayEditPage():void{
             console.log("Edit Contact Page ");
+
             ContactFormValidation();
-            $("#addButton").on("click",()=>{
-                LoadLink("edit","add");
-            });
-            let page = location.hash.substring(1);
+            let page = router.LinkData;
             switch (page){
                 case "add":
                     $("main>h1").text("Add Contact");
@@ -292,6 +294,7 @@
                         let fullName = document.forms[0].fullName.value;
                         let contactNumber = document.forms[0].contactNumber.value;
                         let emailAddress = document.forms[0].emailAddress.value;
+
                         AddContact(fullName,contactNumber,emailAddress);
                                LoadLink("contact-list");
                     });
@@ -300,7 +303,6 @@
                     });
                     break;
                 default:{
-
                     $("#editButton").html(`<i class="fas fa-plus-circle fa-sm"> Save</i>`);
                     let contact = new core.Contact();
                     contact.deserialize(localStorage.getItem(page) as string);
@@ -313,7 +315,7 @@
                         contact.ContactNumber= $("#contactNumber").val() as string;
                         contact.EmailAddress= $("#emailAddress").val() as string;
                         localStorage.setItem(page,contact.serialize() as string)  ;
-                        location.href ="contact-list";
+                        LoadLink("contact-list");
                     });
                     $("#cancelButton").on("click",()=>{
                                LoadLink("contact-list");

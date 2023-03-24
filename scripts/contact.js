@@ -39,7 +39,7 @@ var core;
             return null;
         }
         deserialize(data) {
-            const propertyArray = data.split(",");
+            let propertyArray = data.split(",");
             this.m_fullname = propertyArray[0];
             this.m_contactnumber = propertyArray[1];
             this.m_emailaddress = propertyArray[2];
