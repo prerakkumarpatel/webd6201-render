@@ -1,0 +1,24 @@
+{
+  "name": "webd6201.render",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": "https://github.com/prerakkumarpatel/WebD6201.git",
+  "author": "prerakkumarpatel <prerakkumar.patel@dcmail.ca>",
+  "license": "MIT",
+  "description": "Repo for WebD 6201 week1",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.3",
+    "jquery": "^3.6.3",
+    "mime-types": "^2.1.35"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.16",
+    "@types/mime-types": "^2.1.1",
+    "@types/node": "^18.15.7"
+  }
+}
