@@ -100,6 +100,7 @@
         {
             // use AJAX to load the header content
             console.log("load headder called");
+
             $.get("./views/components/header.html", function(html_data)
             {
                 // inject Header content into the page

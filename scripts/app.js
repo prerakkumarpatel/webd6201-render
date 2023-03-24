@@ -50,7 +50,8 @@
         });
     }
     function LoadHeader() {
-        $.get("./Views/components/header.html", function (html_data) {
+        console.log("load headder called");
+        $.get("./views/components/header.html", function (html_data) {
             $("header").html(html_data);
             AddNavigationEvents();
             CheckLogin();
