@@ -1,7 +1,7 @@
     /*
     * WebD6201
     * Name - Prerakkumar Patel (100846056)
-    * DATE - FEB 24, 2023
+    * DatE - FEB 24, 2023
     * * */
     "use strict";
     /// IIFE Function
