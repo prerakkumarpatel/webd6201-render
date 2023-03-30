@@ -3,30 +3,22 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const http_1 = __importDefault(require("http"));
-const fs_1 = __importDefault(require("fs"));
-const mime_types_1 = __importDefault(require("mime-types"));
-const hostname = '127.0.0.1';
+const express_1 = __importDefault(require("express"));
+const path_1 = __importDefault(require("path"));
+const app = (0, express_1.default)();
+const router = express_1.default.Router();
 const port = process.env.PORT || 3000;
-let lookup = mime_types_1.default.lookup;
-const server = http_1.default.createServer((req, res) => {
-    let path = req.url;
-    if (path === "/" || path === "/home") {
-        path = "/index.html";
-    }
-    let mime_type = lookup(path.substring(1));
-    fs_1.default.readFile(__dirname + path, function (err, data) {
-        if (err) {
-            res.writeHead(404);
-            res.end("error 404 - file not found " + err.message);
-            return;
-        }
-        res.setHeader("X-Content-Type_options", "nosniff");
-        res.writeHead(200, { 'Content-Type': mime_type });
-        res.end(data);
-    });
+app.use(router);
+app.set("views", path_1.default.join(__dirname, "./views"));
+app.set("view engine", "ejs");
+app.use(express_1.default.static(path_1.default.join(__dirname, "./client/")));
+app.use(express_1.default.static(path_1.default.join(__dirname, "./node_modules/")));
+router.get('/', function (req, res, next) {
+    res.render('index', { title: "Hello World" });
+    next();
 });
-server.listen(port, () => {
-    console.log(`Server running at ${hostname}:${port}/`);
+app.listen(port, () => {
+    console.log(`Server running at :${port}/`);
 });
+exports.default = app;
 //# sourceMappingURL=server.js.map

@@ -1,33 +1,28 @@
 "use strict";
-import http from 'http';
-import  fs from 'fs';
-import mime from "mime-types";
+import express from 'express';
+import path from 'path';
 
-const hostname = '127.0.0.1';
+const app = express();
+const router= express.Router();
 const port = process.env.PORT||3000;
-let lookup = mime.lookup;
 
+//configration
+app.use(router);
+app.set("views",path.join(__dirname,"./views"));
+app.set("view engine" , "ejs");
 
-const server = http.createServer((req, res) => {
-    let path : string = req.url as string;
-    if(path === "/"||path==="/home"){
-        path ="/index.html";
-    }
-    let mime_type :string =lookup(path.substring(1)) as string;
+//static configuration
+app.use(express.static(path.join(__dirname,"./client/")));
 
-    fs.readFile(__dirname + path,function (err, data){
-        if (err){
-            res.writeHead(404);
-            res.end("error 404 - file not found "+ err.message);
-            return;
-        }
-        res.setHeader("X-Content-Type_options","nosniff");
-        res.writeHead(200,{'Content-Type': mime_type});
-        res.end(data);
-    });
+app.use(express.static(path.join(__dirname,"./node_modules/")));
+//middleware
+router.get('/',function (req, res, next){
+    res.render('index',{title:"Hello World"});
+    next();
 });
 
 
-server.listen(port,  () => {
-    console.log(`Server running at ${hostname}:${port}/`);
+app.listen(port,  () => {
+    console.log(`Server running at :${port}/`);
 });
+export default app;
