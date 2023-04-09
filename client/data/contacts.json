@@ -1,0 +1,20 @@
+{
+  "contacts":
+    [
+        {
+          "DisplayName": "Peter Parker",
+          "ContactNumber":"999-888-1234",
+          "EmailAddress": "peter@gmail.com"
+        },
+      {
+      "DisplayName": "prerak Parker",
+      "ContactNumber":"988-888-1234",
+      "EmailAddress": "prerak@gmail.com"
+    },
+      {
+      "DisplayName": "prem Parker",
+      "ContactNumber":"966-888-1234",
+      "EmailAddress": "prem@gmail.com"
+    }
+    ]
+}
