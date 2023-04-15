@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a40e1173-8f19-4711-87db-e75298e642da" name="Changes" comment="Assighnment4">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prerakkumarpatel.github.io.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/week5.2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nojekyll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/scripts/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/scripts/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/scripts/app.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/client/scripts/app.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/scripts/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/scripts/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/passport-local-mongoose/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/passport-local-mongoose/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/qs/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/qs/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/qs/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/qs/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/qs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/qs/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/qs/dist/qs.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/qs/dist/qs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/qs/lib/stringify.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/qs/lib/stringify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/qs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/qs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/qs/test/stringify.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/qs/test/stringify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/config/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/config/app.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/app.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/config/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/contact.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/contact.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/contact.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/contact.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/user.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/user.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/index.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/users.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/users.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/views/components/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/server/views/components/footer.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/views/components/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/server/views/components/header.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/views/content/about.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/server/views/content/about.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/views/content/contact.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/server/views/content/contact.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/views/content/edit.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/views/content/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/server/views/content/home.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/views/content/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/server/views/content/login.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/views/content/projects.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/server/views/content/projects.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/views/content/register.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/server/views/content/register.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/views/content/services.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/server/views/content/services.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/server/views/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/yarn-error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2ORP6Xunw2blVS9lNMI1TKJMxUv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "G:/My Drive/durham college 4/WebDev Client Side/render/webd6201.render",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "vcs.Mercurial",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a40e1173-8f19-4711-87db-e75298e642da" name="Changes" comment="" />
+      <created>1681520247406</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681520247406</updated>
+      <workItem from="1681520248577" duration="369000" />
+      <workItem from="1681521006191" duration="319000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Assighnment4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assighnment4" />
+  </component>
+</project>
