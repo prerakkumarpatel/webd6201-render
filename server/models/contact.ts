@@ -1,6 +1,8 @@
+//import mongoose
 import  mongoose from "mongoose";
 
-const  ContactSchema = new mongoose.Schema(
+//creating schema
+const  ContactSchema : any = new mongoose.Schema(
     {
         FullName:String,
         ContactNumber:String,
@@ -10,5 +12,6 @@ const  ContactSchema = new mongoose.Schema(
     collection:"contacts"}
 );
 
+// creating model
 const Model = mongoose.model("Contact",ContactSchema);
 export default Model;

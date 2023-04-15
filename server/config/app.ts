@@ -1,19 +1,39 @@
+//common modules for app
 import createError from 'http-errors';
 import express, {NextFunction} from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import mongoose from 'mongoose';
-import indexRouter from '../routes';
-import usersRouter from '../routes/users';
+
+//routes
+import indexRouter from '../routes/index';
+import authRouter from '../routes/auth';
+import contactListRouter from '../routes/contact-list';
+
+//for database configuration
 import * as DBConfig from './db';
+
+//schema
+import User from '../models/user';
+
+//module for authentication
 import  session from 'express-session';
 import passport from 'passport';
 import passportLocal from 'passport-local';
 import flash from 'connect-flash'
 let localStrategy = passportLocal.Strategy;  //alias
 
-import User from '../models/user';
+//modules to support authentication
+import cors from 'cors';
+import passportJWT from 'passport-jwt';
+
+
+//JWT Aliases
+let JWTStrategy = passportJWT.Strategy;
+let ExtractJWT = passportJWT.ExtractJwt;
+
+
 
 mongoose.connect(DBConfig.RemoteURI);
 const db = mongoose.connection;
@@ -35,8 +55,36 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(flash());
 
+//setup cors
+app.use(cors());
 
+//JWT Options
+let jwtOptions =
+    {
+      jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
+      secretOrKey: DBConfig.SessionSecret
+    }
+
+//define our JWT Strategy
+//http://www.passportjs.org/packages/passport-jwt/
+let strategy = new JWTStrategy(jwtOptions, function(jwt_payload, done)
+{
+  User.find({id: jwt_payload.sub}).then(function (user : any){
+    if (user) {
+      return done(null, user);
+    } else {
+      return done(null, false);
+      // or you could create a new account
+    }
+  }).catch(function(err){
+    if (err) {
+      return done(err, false);
+    }
+  });
+
+});
 
 app.use(express.static(path.join(__dirname, '../../client')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
@@ -51,16 +99,16 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
+//passport for authentication
 passport.use(User.createStrategy());
-
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 
-
-
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/', authRouter);
+app.use('/', contactListRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req:express.Request, res:express.Response, next:NextFunction):void {

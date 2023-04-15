@@ -1,8 +1,8 @@
-<div class="container " >
+<div class="container  " >
   <h1 class="text-center"> Contact Us </h1>
   <div id="messageArea" class=""></div>
-  <div class=" row justify-content-lg-center g-3 ">
-    <form id="contactpage" method="post"  class="col-md-10 col-sm-10 col-lg-6 bg-opacity-10 bg-dark m-3 p-5 rounded-3 ">
+
+    <form name="conatctform" id="contactpage" method="post"  class="col-md-10 col-sm-10 col-lg-6 bg-opacity-10 mx-auto bg-dark m-3 p-5 rounded-3 ">
       <div class="input-group mb-3">
         <span class="input-group-text">Full Name </span>
         <input  id="fullName" name="fullName" type="text" class="form-control"
@@ -18,6 +18,10 @@
         <input  id="emailAddress" name="emailAddress" type="email" class="form-control"
                 aria-describedby="Email Address Input "  aria-label="Email Address Input" required>
       </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Notes</span>
+        <textarea id="notes" name="notes" class="form-control" aria-describedby="Notes Input" aria-label="Notes Input"></textarea>
+      </div>
 
       <div class="mb-3 form-check">
         <input id="subscribeCheckbox"  name = "subscribeCheckbox" type="checkbox" class=" form-check-input" >
@@ -32,5 +36,8 @@
 
     </div>
     </form>
+
+  <div class="mx-auto col-md-10 col-sm-10 col-lg-6 bg-opacity-10 bg-dark m-3 p-5 rounded-3  d-flex ">
+    <%- include('../components/contactme')%>
   </div>
-</div>
+  </div>

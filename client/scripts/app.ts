@@ -10,8 +10,6 @@
        function DisplayHomePage():void {
             console.log("home page called");
             $("#AboutUsBtn").on("click", () => location.href = "/about");
-            $("main").append(`<article class="container"><p id="ArticleParagraph" class="mt-3">This is Article paragraph</p> </article>`)
-            $("main").append(`<p class="mt-3" id="MainParagraph">This is jquery generated paragraph</p> `);
 
         }
 
@@ -142,105 +140,18 @@
             ContactFormValidation();
         }
 
-        function AuthGuard():void{
-            let protected_routes:string[]=["/contact-list","/edit"];
-            if(protected_routes.indexOf(location.pathname)>-1){
-                if(!sessionStorage.getItem("user")){
-                    location.href="/login";
-                    console.log("auth guard working");
-                }}
-        }
 
         function  DisplayLoginPage()
         {
             console.log("DisplayLoginPageCalled");
 
-             let messageArea= $("#messageArea");
-             messageArea.hide();
-            $("#loginButton").on("click",function (){
-
-                let success = false;
-                let newUser = new core.User();
-                $.get("./data/user.json",function (data){
-
-                    let username = document.forms[0].username.value;
-                    let password = document.forms[0].password.value;
-                   for(const user of data.users){
-
-                       if(username === user.Username && password === user.Password){
-                           newUser.fromJSON(user);
-                           success=true;
-                           break;
-                       }
-                   }
-
-                   if(success){
-                       sessionStorage.setItem("user",newUser.serialize() as string);
-                       messageArea.removeAttr("class").hide();   
-
-                       location.href = "/contact-list";
-                       let user: string | null = sessionStorage.getItem("user")?.split(" ")[0] ?? null;
-                       let linkItem = $("<li>").addClass("nav-item");
-                       console.log(user);
-                       let a = $("<a>").addClass("nav-link border border-danger border-2 rounded ").text(user as string);
-
-                       $("ul li:last-child").before(linkItem.add(a));
-
-
-                   }else {
-                       $("#username").trigger("focus").trigger("select");
-                       messageArea.addClass("alert alert-danger").text("user is not exists").show();
-
-                   }
-                });
-            });
-            $("#cancelButton").on("click",function (){
-                document.forms[0].reset();
-                location.href ="/";
-            });
-
-
         }
 
-        // Checking for user login
-        function CheckLogin():void{
-            if(sessionStorage.getItem("user")) {
-                console.log("check login called");
-
-                $("#login").html(`<a id="logout" class="nav-link" href="#"><i class="fas fa-sign-out-alt "></i>Logout</a>`)
-
-
-
-            }
-            $("#logout").on("click",function () {
-                console.log("logout clicked");
-                sessionStorage.clear();
-                location.href = "/";
-
-            });
-        }
 
         // Displaying register page
         function  DisplayRegisterPage()
         {
             // displaying function name in console
-            console.log("DisplayRegisterPageCalled");
-            $("#").on("click", () => location.href = "/about"
-            );
-            // submit button clicked
-            $("#submitButton").on("click",(event)=>{
-                event.preventDefault();
-
-                let firstName = document.forms[0].firstName.value;
-                let emailAddress = document.forms[0].emailAddress.value;
-                let lastName = document.forms[0].lastName.value;
-                let password = document.forms[0].password.value;
-
-                let newUser = new core.User(firstName ,emailAddress,firstName+lastName,password);
-                console.log(newUser.toString());
-                ($("form")[0] as HTMLFormElement).reset();
-
-            });
             // calling function to validate the form
             RegisterFormValidation();
 
@@ -260,7 +171,7 @@
             console.log("app started");
 
             let page_id =$("body")[0].getAttribute("id");
-            CheckLogin();
+
             switch (page_id)
             {
                 case "home": DisplayHomePage(); break;
